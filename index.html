@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Priyanshu's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <style>
+    * {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f172a;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Hero Section */
+    header.hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    header.hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    header.hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    header.hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    h2 {
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      border: none;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .form-control {
+      background-color: #1e293b;
+      color: white;
+      border: none;
+    }
+
+    .form-control:focus {
+      box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.5);
+    }
+
+    footer {
+      background-color: #1e293b;
+      color: #ccc;
+      padding: 30px 0;
+    }
+
+    /* Page Fade In */
+    body {
+      opacity: 0;
+      transition: opacity 1s ease-in;
+    }
+
+    body.loaded {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero text-white">
+    <div class="container" data-aos="fade-up">
+      <h1>Hi, I'm Priyanshu</h1>
+      <p class="lead">Student ,A passionate developer & future full-stack expert</p>
+    </div>
+  </header>
+
+  <!-- Projects -->
+  <section id="projects" class="bg-light text-dark">
+    <div class="container" data-aos="fade-up">
+      <h3 class="text-center">Projects</h3>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card shadow">
+            <img  class="card-img-top" alt="FIRST:">
+            <div class="card-body">
+              <h5 class="card-title">LINE FOLLOWER ROBOT</h5>
+              <p class="card-text"> line follower robot which perform well in noida internaional competion 2024 </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow">
+            <img  class="card-img-top" alt="SECOND:">
+            <div class="card-body">
+              <h5 class="card-title">EMERGENCY LIGHT</h5>
+              <p class="card-text">emergency light whih turns on when main poer supply off .</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow">
+            <img  class="card-img-top" alt="THIRD:">
+            <div class="card-body">
+              <h5 class="card-title">Project Three</h5>
+              <p class="card-text">A professional portfolio website or embedded system (THIS One).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="Skills" class="bg-dark text-white">
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center">Skills</h2>
+      <div class="row text-center">
+        <div class="col-md-3"><h5>HTML</h5></div>
+        <div class="col-md-3"><h5>CSS</h5></div>
+        <div class="col-md-3"><h5>JavaScript</h5></div>
+        <div class="col-md-3"><h5>Bootstrap</h5></div>
+        <div class="col-md-3"><h5>EasyEDA tool</h5></div>
+        <div class="col-md-3"><h5>Kicad tool</h5></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="bg-light text-dark">
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center">EDUCATION</h2>
+      <ul class="list-group">
+        <li class="list-group-item">B.Tech in Electronics and Telecommunication - JDCOEM</li>
+            <li class="list-group-item">CGPA - 9.05</li>
+        <li class="list-group-item">HSC - ST.PALL college , hudkeswar</li>
+            <li class="list-group-item">Percentage :- 69.88</li>
+        <li class="list-group-item">SSC -SOMALWARl HIGH SCHOOL khamla , Nagpur </li>
+            <li class="list-group-item">Percentage :- 69.33</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Blogs -->
+  <section id="blogs" class="bg-dark text-white">
+    <div class="container" data-aos="fade-up">
+      <h3 class="text-center">Latest Blogs</h3>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card bg-secondary text-white">
+            <div class="card-body">
+              <h5 class="card-title">Top 3 Mini Projects in Electronics for Beginner</h5>
+              <p class="card-text">Use your ETC background..</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card bg-secondary text-white">
+            <div class="card-body">
+              <h5 class="card-title">Why Electronics Students Should Learn Web Dev</h5>
+              <p class="card-text">Mix your field with your passion.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card bg-secondary text-white">
+            <div class="card-body">
+              <h5 class="card-title">How I Built This Portfolio Website</h5>
+              <p class="card-text">Step-by-step breakdown with code snippets.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-light text-dark">
+    <div class="container" data-aos="fade-up">
+      <h3 class="text-center">-Contact Me-</h3>
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Your Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Your Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">feedback</label>
+          <textarea class="form-control" id="message" rows="4" placeholder="Give your feedback here"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">submit response</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>© 2025 Priyanshu +91-7057365981 |<br> Built with ❤️ using HTML, CSS & Bootstrap</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Animation Init + Fade-in -->
+  <script>
+    // Page fade-in
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    });
+  </script>
+
+</body>
+</html>
