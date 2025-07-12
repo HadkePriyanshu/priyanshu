@@ -1,0 +1,156 @@
+import logo from './logo.svg';
+import './App.css';
+
+const cricketers = [
+  {
+    name: "KL",
+    country: "India",
+    image: "https://wallpaperaccess.com/full/5820971.jpg",
+    role: "Batsman",
+    matches: 50,
+    strikeRate: 135.7,
+  },
+  {
+    name: "YB Jaiswal",
+    country: "INDIAN",
+    image: "https://img.onmanorama.com/content/dam/mm/en/sports/vantage-point/images/2023/7/15/jaiswal.jpg",
+    role: "Opener",
+    matches: 21,
+    strikeRate: 142.3,
+  },
+  {
+    name: "karun nair",
+    country: "INDIA",
+    image: "https://www.bing.com/th/id/OIP.CjaIU4tZEGFAh5D6XXd4DgHaEq?w=241&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
+    role: "Middle-order Batsman",
+    matches: 18,
+    strikeRate: 128.5,
+  },
+  {
+    name: "gill",
+    country: "INDIA",
+    image: "https://www.bing.com/th/id/OIP.OPnnPf6onq0rF0fQQEHpfwHaEK?w=288&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
+    role: "Opener",
+    matches: 36,
+    strikeRate: 139.9,
+  },
+  {
+    name: "RISHAB PANT",
+    country: "INDIA",
+    image: "https://th.bing.com/th/id/OIP.Y6Ok4iDgOQfkaY-OG_mW1QHaEK?w=277&h=180&c=7&r=0&o=7&pid=1.7&rm=3",
+    role: "Wicket Keeper",
+    matches: 48,
+    strikeRate: 145.2,
+  },
+  {
+    name: "JADEJA",
+    country: "INDIA",
+    image: "https://th.bing.com/th?q=Jadeja+Wallpaper+for+PC&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&pid=InlineBlock&rm=3&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247",
+    role: "All-rounder",
+    matches: 74,
+    strikeRate: 133.2,
+  },
+  {
+    name: "SIRAJ",
+    country: "INDIA",
+    image: "https://www.royalchallengers.com/PRRCB01/public/styles/1061x767_landscape/public/2024-01/GettyImages-1497191128.jpg?itok=pq-2yNL4",
+    role: "Bowler",
+    matches: 29,
+    strikeRate: 0,
+  },
+  {
+    name: "BHUMRA",
+    country: "INDIA",
+    image: "https://th.bing.com/th/id/OIP.YDS3F09kBWwPXOym-Rug7gHaE5?w=264&h=180&c=7&r=0&o=7&pid=1.7&rm=3",
+    role: "Fast Bowler",
+    matches: 68,
+    strikeRate: 0,
+  },
+  {
+    name: "SUNDAR",
+    country: "INDIA",
+    image: "https://th.bing.com/th/id/OIP.pTC5LbciSInz0CCMWuYiyAHaFj?w=207&h=180&c=7&r=0&o=7&pid=1.7&rm=3",
+    role: "All-rounder",
+    matches: 30,
+    strikeRate: 127.6,
+  },
+  {
+    name: "nkr",
+    country: "INDIA",
+    image: "https://news24online.com/wp-content/uploads/2024/12/Nitish-Kumar-Reddy-after-his-maiden-Test-century-in-Melbourne.jpg",
+    role: "All-rounder",
+    matches: 5,
+    strikeRate: 127.6,
+  },
+];
+
+function App() {
+  return (
+    <div className="container">
+      <header>
+        <h1>PLAYING XI</h1>
+        <hr />
+      </header>
+
+      <section>
+        <h2>INDIAN SQUADE VS ENGLAND AT LOARDS</h2>
+        <div className="card-grid">
+          {cricketers.map((player, index) => (
+            <div className="card" key={index}>
+              <img src={player.image} alt={player.name} />
+              <h3>{player.name}</h3>
+              <p><strong>Country:</strong> {player.country}</p>
+              <p><strong>Role:</strong> {player.role}</p>
+              <p><strong>Matches:</strong> {player.matches}</p>
+              {player.strikeRate > 0 && (
+                <p><strong>Strike Rate:</strong> {player.strikeRate}</p>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="form-section">
+        <h2>Give Your Prediction: Who Will Perform Best?</h2>
+        <form>
+          <input type="text" placeholder="Your Name" required />
+          <input type="text" placeholder="Favorite Player" required />
+          <input type="text" placeholder="Prediction (Runs/Wickets)" required />
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
+      {/* 📢 New Match News Section */}
+      <section className="news-section">
+        <h2>📰 Match Update</h2>
+        <p>
+          India is set to clash with England at the historic Lord's Cricket Ground. 
+          With top form players and a well-balanced squad, it's expected to be a thrilling encounter.
+        </p>
+      </section>
+
+      {/* 🧠 Match Summary */}
+      <section className="summary-box">
+        <h2>🏁 Match Summary</h2>
+        <ul>
+          <li>🕒 Match Time: 3:00 PM IST</li>
+          <li>📍 Venue: Lord's, London</li>
+          <li>🌦 Weather: Slightly cloudy, no rain expected</li>
+        </ul>
+      </section>
+
+      {/* MVP */}
+      <section className="mvp-section">
+        <h2>🔥 Predicted MVP of the Match</h2>
+        <p><strong>SHUBMAN GILL</strong> - Based on recent form, technique, and past performance at Lord's.</p>
+      </section>
+
+      <footer>
+        <p>Created with ❤️ by Priyanshu | React Project | July 2025</p>
+      </footer>
+    </div>
+  );
+}
+
+export default App;
+  
